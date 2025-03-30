@@ -17,6 +17,14 @@ body {
 	font-smoothing: antialiased;
 }
 
+.carousel-item {
+	display: flex;
+	justify-content: center;
+}
+.card {
+	width: 18rem;
+	margin: 10px;
+}
 h1,
 h2,
 h3,
@@ -252,9 +260,89 @@ ol {
 	clear: both;
 	overflow: hidden;
 	padding: 18px 0;
-	border-bottom: 1px solid #ffb320;
+	border-bottom: 1px solid #790303;
 }
 
+
+body, div {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Overlay to appear on the left half */
+.carousel-slide-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;  /* This covers the left half of the image */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1; /* Ensures it appears above the image */
+}
+
+/* Title Styling */
+.carousel-slide-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styling */
+.carousel-slide-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.custom-btn {
+    background-color: #9E0C12 !important; /* Override default button color */
+    border-color: #9E0C12 !important;
+    color: white !important;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.custom-btn:hover {
+    background-color: #7a0c0f !important; /* Darker shade for hover effect */
+    border-color: #7a0c0f !important;
+}
+
+/* Button inside carousel */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* SVG Icons for prev and next buttons */
+.carousel-control-prev svg, .carousel-control-next svg {
+    fill: #9E0C12 !important; /* Custom color for control icons */
+}
+
+.carousel-control-prev:hover svg, .carousel-control-next:hover svg {
+    fill: #7a0c0f !important;
+}
 .site-logo {
 	display: inline-block;
 	float: left;
@@ -264,7 +352,7 @@ ol {
 .user-panel {
 	float: right;
 	font-weight: 500;
-	background: #ffb320;
+	background: #740101 !important;
 	padding: 8px 28px;
 	border-radius: 30px;
 }
@@ -288,6 +376,7 @@ ol {
 }
 
 .main-menu ul li a {
+	
 	display: inline-block;
 	font-size: 16px;
 	color: #fff;
@@ -428,7 +517,7 @@ ol {
 	font-size: 18px;
 	font-weight: 500;
 	color: #fff;
-	background: #ffb320;
+	background: #550000;
 	z-index: 1;
 }
 

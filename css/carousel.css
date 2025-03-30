@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "ubisoft_sans";
+    src: url("https://static-dm.ubisoft.com/global/prod/fonts/ubisoftsans-regular.woff2") format("woff2"),
+         url("https://static-dm.ubisoft.com/global/prod/fonts/ubisoftsans-regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ubisoft_sansbold";
+    src: url("https://static-dm.ubisoft.com/global/prod/fonts/ubisoftsans-bold.woff2") format("woff2"),
+         url("https://static-dm.ubisoft.com/global/prod/fonts/ubisoftsans-bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Apply to h2 */
+.carousel-item h2 {
+    font-family: "portrait", "ubisoft_sans", serif;
+    color:white;
+}
+body {
+    background-image: url(https://static-dm.ubisoft.com/assassins-creed/franchise/prod/b7db6092b3081a637071c8a88a9270a0.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50%;
+    font-family: "ubisoft_sans", sans-serif;
+}
+
+h2, h1 {
+    font-family: "ubisoft_sansbold", sans-serif;
+}
+
+.btn-primary {
+    font-family: "ubisoft_sansbold", sans-serif;
+}
+
+
+
+.carousel-item {
+    position: relative;
+
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 790px;
+    object-fit: cover !important;
+}
+.carousel-slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #9e0c113f; /* Semi-transparent background */
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    clip-path: polygon(0 0, 100% 0, calc(100% - clamp(160px, 12vh, 200px)) 100%, 0 100%); /* Diagonal cut */
+    z-index: 2; /* Lower than the text, higher than the image */
+    pointer-events: none; /* Ensures it doesn’t block clicks */
+}
+
+/* Diagonal Overlay with dynamic calculation for bottom-right */
+.carousel-slide-content {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+    pointer-events: none;
+    z-index: 10; /* Above background and button */
+}
+
+/* Title Styling */
+.carousel-slide-content h2 {
+    text-transform: uppercase;
+    margin-left: 40px;
+    font-size: 2.5rem;
+    font-weight:400;
+    margin-bottom: 10px;
+    font-family: "PT Serif", serif !important;
+}
+
+/* Paragraph Styling */
+.carousel-slide-content p {
+    margin-left: 40px;
+    font-size: 1.1rem;
+    color:white;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.custom-btn {
+    margin-left: 40px;
+    background-color: #ffffff1f !important; /* Override default button color */
+    border-color: #ffffff63 !important;
+    backdrop-filter: blur(10px);
+    color: white !important;
+    padding: 10px 20px;
+    width:65%;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+    pointer-events: all;
+}
+.btn1 {
+    background-color: #ffffff !important;
+    border-color: #292929 !important;
+    font-weight: 600;
+    color: rgb(119, 119, 119) !important;
+}
+
+.custom-btn:hover {
+    background-color: #7a0c0f !important; /* Darker shade for hover effect */
+    border-color: #7a0c0f !important;
+}
+
+/* Button inside carousel */
+.carousel-control-prev, .carousel-control-next {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    pointer-events: all;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* SVG Icons for prev and next buttons */
+.carousel-control-prev svg {
+    fill: #9E0C12 !important; /* Custom color for control icons */
+}
+.carousel-control-next svg {
+    fill: #180001 !important;
+}
+.carousel-control-prev:hover svg, .carousel-control-next:hover svg {
+    fill: #7a0c1049 !important;
+}
+
+/* to header */
+.main-menu ul li a {
+    text-decoration: none !important;
+}
+.user-panel {
+    background-color: #7a0c0f;
+    color:white;
+}
+
+.user-panel a {
+    color:white;
+}
+.header-section {
+    border-bottom: 2px solid #000000;
+}
+
+/*body */
+.ln-title {
+    background: linear-gradient(to right,  rgba(68, 0, 3, 0.281), rgba(158, 12, 18, 0.8));
+    backdrop-filter: blur(10px);
+}
+.latest-news-section {
+    background-color: rgba(33, 45, 51, 1);
+}
+
+.fi-content a{
+    text-decoration: none;
+}
+
+.cata{
+    background-color: rgba(33, 45, 51, 1) !important;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.534);
+}
+
+.rgi-content {
+    background-color: #c4c4c456 !important;
+    backdrop-filter: blur(10px);
+    border: 1px #9b9b9b56 !important;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    
+}
+
+.rgi-thumb {
+    height: 400px !important;
+    border: 1px #9b9b9b56 !important;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
+}
