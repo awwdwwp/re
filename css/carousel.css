@@ -37,10 +37,16 @@ h2, h1 {
 
 
 
-.carousel-item {
-    position: relative;
+.carousel-inner .carousel-item {
+    
+    display: none !important;
+    width: 100% !important;
 
 }
+.carousel-inner .carousel-item.active {
+    display: block !important;
+}
+
 
 .carousel-item img {
     width: 100%;
@@ -153,52 +159,3 @@ h2, h1 {
 }
 
 /* to header */
-.main-menu ul li a {
-    text-decoration: none !important;
-}
-.user-panel {
-    background-color: #7a0c0f;
-    color:white;
-}
-
-.user-panel a {
-    color:white;
-}
-.header-section {
-    border-bottom: 2px solid #000000;
-}
-
-/*body */
-.ln-title {
-    background: linear-gradient(to right,  rgba(68, 0, 3, 0.281), rgba(158, 12, 18, 0.8));
-    backdrop-filter: blur(10px);
-}
-.latest-news-section {
-    background-color: rgba(33, 45, 51, 1);
-}
-
-.fi-content a{
-    text-decoration: none;
-}
-
-.cata{
-    background-color: rgba(33, 45, 51, 1) !important;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.534);
-}
-
-.rgi-content {
-    background-color: #c4c4c456 !important;
-    backdrop-filter: blur(10px);
-    border: 1px #9b9b9b56 !important;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    
-}
-
-.rgi-thumb {
-    height: 400px !important;
-    border: 1px #9b9b9b56 !important;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    
-}

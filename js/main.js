@@ -16,38 +16,33 @@ $(window).on('load', function() {
 	$(".loader").fadeOut(); 
 	$("#preloder").delay(400).fadeOut("slow");
 
-});
-
+}); 
+/*
 (function($) {
 
-	/*------------------
-		Navigation
-	--------------------*/
+	
 	$('.nav-switch').on('click', function(event) {
 		$('.main-menu').slideToggle(400);
 		event.preventDefault();
 	});
 
 
-	/*------------------
-		Background Set
-	--------------------*/
+	
 	$('.set-bg').each(function() {
 		var bg = $(this).data('setbg');
 		$(this).css('background-image', 'url(' + bg + ')');
 	});
+}) */
 
 
-	/*------------------
-		Hero Slider
-	--------------------*/
-	$('.hero-slider').owlCarousel({
+	
+/*	$('.hero-slider').owlCarousel({
 		loop: true,
 		nav: false,
 		dots: true,
 		mouseDrag: false,
 		animateOut: 'fadeOut',
-    	animateIn: 'fadeIn',
+    animateIn: 'fadeIn',
 		items: 1,
 		autoplay: true
 	});
@@ -62,19 +57,18 @@ $(window).on('load', function() {
 			$(this).append('<span>.</span>');
 		}
 	});
-
+*/
 
 	/*------------------
 		News Ticker
-	--------------------*/
-	$('.news-ticker').marquee({
+	--------------------*/ 
+/*	$('.news-ticker').marquee({
 	    duration: 10000,
-	    //gap in pixels between the tickers
-	    //gap: 200,
+	    
+	    
 	    delayBeforeStart: 0,
 	    direction: 'left',
 	    duplicated: true
 	});
 
-})(jQuery);
-
+})(jQuery); */
