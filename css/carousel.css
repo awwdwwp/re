@@ -141,8 +141,7 @@ h2, h1 {
 .carousel-control-prev, .carousel-control-next {
     z-index: 1;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    
     z-index: 5;
     pointer-events: all;
     background-color: transparent !important;
