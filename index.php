@@ -137,7 +137,7 @@
 
 
 	<!-- Feature section -->
-	<section class="feature-section spad mb-5">
+	<section class="feature-section spad mb-5 text-center">
 	    <h2 class="text-center mb-5 h1" style="color:white; font-family:PT Serif, serif;text-transform:uppercase">Trending: Assassin's Creed</br>Shadows announcements</h2>
 		<div class="container">
 			<div class="row">
@@ -445,5 +445,6 @@
 	<script src="js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+	
     </body>
 </html>
