@@ -1,3 +1,18 @@
+<?php 
+// Get the requested URI
+$request_uri = $_SERVER['REQUEST_URI'];
+$request_uri = rtrim($request_uri, '/');  // Remove trailing slashes if any
+echo $request_uri;
+
+// Prevent including index.php repeatedly by checking if it's already included
+if ($request_uri == '/' || $request_uri == '/re/index.php') {
+    // Ensure that the home page logic doesn't re-include index.php
+    include_once('index.php');  // Include the homepage 
+} else {
+    // If the page doesn't exist, show 404 page
+    include_once('404.php');  // Only include the 404 page
+}
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -26,9 +41,11 @@
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/carousel.css"/>
 	<link rel="stylesheet" href="css/body.css"/>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 </head>
 <body>
 	<!-- Page Preloder -->
@@ -142,7 +159,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6 p-0">
-					<div class="feature-item set-bg" data-setbg="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2iB4IiCqv7wxcf8SDA1rGq/cd245fc1206d07699c876e64bc4a2ee1/ACFranchise-MoreThanGames-UbisoftGear.jpg">
+					<div class="feature-item set-bg" style="background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2iB4IiCqv7wxcf8SDA1rGq/cd245fc1206d07699c876e64bc4a2ee1/ACFranchise-MoreThanGames-UbisoftGear.jpg');" >
 						<span class="cata new">new</span>
 						<div class="fi-content text-white">
 							<h5><a href="#">Shop The Official Assassin's Creed Merch Collection!</a></h5>
@@ -152,7 +169,7 @@
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 p-0">
-					<div class="feature-item set-bg" data-setbg="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/50kCZyPBfq4irQxZKhuA8N/f5a3fe0289f27b2bb32713dbb7d0199b/ACSH-Rhinoshield-collab.jpg">
+					<div class="feature-item set-bg" style="background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/50kCZyPBfq4irQxZKhuA8N/f5a3fe0289f27b2bb32713dbb7d0199b/ACSH-Rhinoshield-collab.jpg');">
 						<div class="fi-content text-white">
 							<h5><a href="#">Assassin’s Creed Shadows x RHINOSHIELD – Phone Case Collection</a></h5>
 							<a href="#" class="fi-comment">Buy now</a>
@@ -160,7 +177,7 @@
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 p-0">
-					<div class="feature-item set-bg" data-setbg="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/22Ek3V0NdDsy5EevJwdRWd/7f2354c66aa259fd0d99655892c18c2c/acf-merch-bokksu-collab.jpg">
+					<div class="feature-item set-bg" style="background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/22Ek3V0NdDsy5EevJwdRWd/7f2354c66aa259fd0d99655892c18c2c/acf-merch-bokksu-collab.jpg');">
 						<span class="cata new">new</span>
 						<div class="fi-content text-white">
 							<h5><a href="#">Japan Crate x Assassin’s Creed Shadows — Strike with Flavor Snack Crate</a></h5>
@@ -169,7 +186,7 @@
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 p-0">
-					<div class="feature-item set-bg" data-setbg="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6YYI7xdKYBlhJGxAEqGlom/f93d75de9a6bad3fc993b91f04819af8/FF-x-AC-More-Than-Games_Final_web.jpg">
+					<div class="feature-item set-bg" style="background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6YYI7xdKYBlhJGxAEqGlom/f93d75de9a6bad3fc993b91f04819af8/FF-x-AC-More-Than-Games_Final_web.jpg');">
 						<span class="cata racing">limited!</span>
 						<div class="fi-content text-white">
 							<h5><a href="#">FocusFuel: Limited Edition Citrus Yuzu - with in-game benefits!</a></h5>
@@ -184,8 +201,8 @@
 
 
 	<!-- Recent game section  -->
-	<section class="recent-game-section spad set-bg" data-setbg="https://images5.alphacoders.com/136/1362766.jpeg">
-		<div class="container">
+	<section class="recent-game-section spad set-bg text-center" style="Background-image: url('https://images5.alphacoders.com/136/1362766.jpeg')">
+		<div class="container cnt">
 			<div class="section-title">
 				<div class="cata new">new</div>
 				<h2 class="text-white" style="font-family: PT Serif, serif; text-transform: uppercase">Recent Games</h2>
@@ -193,13 +210,12 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
 					<div class="recent-game-item">
-						<div class="rgi-thumb set-bg" data-setbg="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/30dd8syYR9JAPhV759qTQe/16542fd1eb739190a9eec72f3d3b08fb/acm-boxshot.jpg?imwidth=360">
-							
+						<div class="rgi-thumb set-bg" style="Background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/30dd8syYR9JAPhV759qTQe/16542fd1eb739190a9eec72f3d3b08fb/acm-boxshot.jpg?imwidth=360')">
 						</div>
 						<div class="rgi-content text-white text-center">
 							<h5>Assasin’s Creed</br>Mirage</h5>
 							
-							<div class="rgi-extra">
+							<div class="rgi-extra text-center">
 								<div class="rgi-star"><img src="img/icons/star.png" alt=""></div>
 								<div class="rgi-heart"><img src="img/icons/heart.png" alt=""></div>
 							</div>
@@ -208,7 +224,7 @@
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="recent-game-item">
-						<div class="rgi-thumb set-bg" data-setbg="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/25jYqtlv4yZXspIIIrPYcy/f90d2f35fcb4f0080a6abbddb5e927ad/AC-Shadows-boxshot.jpg?imwidth=360">
+						<div class="rgi-thumb set-bg" style="Background-image: url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/25jYqtlv4yZXspIIIrPYcy/f90d2f35fcb4f0080a6abbddb5e927ad/AC-Shadows-boxshot.jpg?imwidth=360')" data-setbg="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/25jYqtlv4yZXspIIIrPYcy/f90d2f35fcb4f0080a6abbddb5e927ad/AC-Shadows-boxshot.jpg?imwidth=360">
 						    <div class="cata new">new</div>
 						</div>
 						<div class="rgi-content text-white text-center">
@@ -223,7 +239,7 @@
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="recent-game-item">
-						<div class="rgi-thumb set-bg" data-setbg="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5EBrXfSnjwvZRpDRtnqmpG/374f103250d4ed61cbb7f2323e063868/ac-valhalla.jpg?imwidth=360">
+						<div class="rgi-thumb set-bg" style="background-image:url('https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5EBrXfSnjwvZRpDRtnqmpG/374f103250d4ed61cbb7f2323e063868/ac-valhalla.jpg?imwidth=360')">
 							
 						</div>
 						<div class="rgi-content text-white text-center">
@@ -238,11 +254,13 @@
 				</div>
 			</div>
 		</div>
+		<button class="custom-btn btn w-25 mt-5 ms-0" type="button" id="btn2" aria-label="view all games">View All Games</button>
 	</section>
 	<!-- Recent game section end -->
 
 
 	<!-- Tournaments section -->
+	 <!-- 
 	<section class="tournaments-section spad">
 		<div class="container">
 			<div class="tournament-title">Tournaments</div>
@@ -285,11 +303,12 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- Tournaments section bg -->
 
 
 	<!-- Review section -->
+	<!-- 
 	<section class="review-section spad set-bg" data-setbg="img/review-bg.png">
 		<div class="container">
 			<div class="section-title">
@@ -343,11 +362,11 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- Review section end -->
 
 
-	<!-- Footer top section -->
+	<!-- Footer top section --> <!--
 	<section class="footer-top-section">
 		<div class="container">
 			<div class="footer-top-bg">
@@ -428,10 +447,41 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- Footer top section end -->
 
-	
+	<div class="promo__wrapper">
+    	<div class="promo__wrapper__media"></div>
+    	<div class="promo__wrapper__content" data-btn-l="8" data-ccid-l="5qKwOpfpE5jqor6CoKp9v2" data-ccm-l="promo">
+    	    <h2 class="promo__content__title mb-1" data-innertext="Visit Other Assassin's Creed Channels:" style="font-family:PT Serif,serif;font-size:24px" data-ccf-l="title">
+    	        Visit Other Assassin's Creed Channels:
+    	    </h2>
+    	    <a class="btn btn-primary promo__wrapper__content__btn external has-image" href="https://assassinscreed.com/twitter" target="_blank" rel="noreferrer noopener">
+    	        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7MSfSWhXCnKkoVagD3E6lJ/89e71af79d43bee32f99824ffdaccd4d/_Ubisoft__global_twitter_logo.png" alt="Twitter">
+    	    </a>
+    	    <a class="btn btn-primary promo__wrapper__content__btn external has-image" href="https://assassinscreed.com/facebook" target="_blank" rel="noreferrer noopener">
+    	        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/32xRzuzxNUJYa3QO5iY8B5/de15e78cd700a515789ce60bd8e57e80/_Ubisoft__global_facebook_logo.png" alt="Facebook">
+    	    </a>
+    	    <a class="btn btn-primary promo__wrapper__content__btn external has-image" href="https://assassinscreed.com/twitch" target="_blank" rel="noreferrer noopener">
+    	        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7qD6KHarSZ9h2uc7G5o20C/c9c34183556205635d0042b498b8a9fa/_Ubisoft__global_twitch_logo.webp" alt="Twitch">
+    	    </a>
+    	    <a class="btn btn-primary promo__wrapper__content__btn external has-image" href="https://assassinscreed.com/instagram" target="_blank" rel="noreferrer noopener">
+    	        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6htnsL4NtlpGqIG7nehH4y/c429c1eab3e0422b745a0b14a51a47ee/_Ubisoft__global_instagram_logo.png" alt="Instagram">
+    	    </a>
+    	    <a class="btn btn-primary promo__wrapper__content__btn external has-image" href="https://assassinscreed.com/yt-playlist" target="_blank" rel="noreferrer noopener">
+    	        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/68qlJsyTv8sTv54rqqfOPO/01a04e004de9c60cf0854a444bd1b778/_Ubisoft__global_youtube_logo.png" alt="YouTube">
+    	    </a>
+    	    <a class="btn btn-primary promo__wrapper__content__btn external has-image" href="https://assassinscreed.com/tiktok" target="_blank" rel="noreferrer noopener">
+    	        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2y2VH4Yqqf7yZzMVw3muFA/c5c7bac8b2dd3956378b5d1562d8fee0/ubisoft-tiktok-social-icon.png" alt="TikTok">
+    	    </a>
+    	    <a class="btn btn-primary promo__wrapper__content__btn external has-image" href="https://assassinscreed.com/reddit" target="_blank" rel="noreferrer noopener">
+    	        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3YvZrNQQJksMvgNxZogXsr/e64d76607cf0b5416618dc3ce1ba96af/ubisoft-global-social_icon-reddit-v2.png" alt="Reddit">
+    	    </a>
+    	    <a class="btn btn-primary promo__wrapper__content__btn external has-image" href="https://assassinscreed.com/discord" target="_blank" rel="noreferrer noopener">
+    	        <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2v7txZYbSOAjPG6dkzkE9a/73206e476307830f4d82cca565b70666/social-icon-discord.png" alt="Discord">
+    	    </a>
+	    </div>
+	</div>
 	<!-- Footer section -->
 	<?php include 'parts/footer.html'; ?>
 	<!-- Footer section end -->

@@ -329,7 +329,7 @@ body, div {
 .carousel-control-prev, .carousel-control-next {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(0%) !important;
     z-index: 5;
     background-color: transparent !important;
     border: none !important;

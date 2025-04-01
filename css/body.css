@@ -11,6 +11,7 @@
 }
 .header-section {
     border-bottom: 2px solid #000000;
+    padding-bottom: 0px;
 }
 
 /*body */
@@ -46,4 +47,106 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     
+}
+
+#btn2 {
+    width: 35% !important;
+}
+
+
+
+.container.cnt:hover .recent-game-item {
+    filter:blur(5px) ;
+}
+.recent-game-item:hover {
+    scale: 1.1;
+    filter:blur(0px) !important;
+    box-shadow: 0px 0px 20px 10px rgba(95, 0, 0, 0.534);
+}
+
+.promo__wrapper {
+    margin-top: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.836); /* Slight transparency */
+    border-radius: 10px;
+}
+
+/* Banner Content */
+.promo__wrapper__content {
+    text-align: center;
+    color: white;
+}
+
+/* Title */
+.promo__content__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.promo__wrapper__content__btn {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    border: none;
+}
+
+.promo__wrapper__content__btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Social Icons */
+.promo__wrapper__content__btn img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1); /* Makes icons white */
+    transition: transform 0.3s ease-in-out;
+}
+
+.promo__wrapper__content__btn:hover img {
+    transform: scale(1.1);
+}
+.site-footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: avenir, Ubisoft Sans, sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
 }
