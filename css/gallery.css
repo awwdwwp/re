@@ -92,3 +92,8 @@ button:hover {
     font-weight: bold;
     font-style: normal;
 }
+
+.header-section {
+    padding-bottom: 18px !important;
+}
+
