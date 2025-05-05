@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -19,8 +21,8 @@
 	<link rel="stylesheet" href="css/animate.css"/> -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="css/body.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
+	<!--<link rel="stylesheet" href="css/body.css"/> -->
+	<!-- <link rel="stylesheet" href="css/style.css"/> -->
 	<link rel="stylesheet" href="css/gallery.css"/>
 
 	
@@ -53,32 +55,33 @@
 		</form>
 </div>
 <div class="text-center mb-5">
-	<?php
-	$jsondata = file_get_contents("json/photo.json");
-	if ($jsondata === false) {
-		die("Error");
-	}
-	$photos = json_decode($jsondata, true);
-	$city = $_GET['city'] ?? 'All';
-	if ($city !== 'All') {
-		$photos = array_filter($photos, function($photo) use ($city) {
-			return $photo['city'] === $city;
-		});
-	}
-	foreach ($photos as $photo):
-		$flink = ltrim($photo['link'], '\\');
-		?>
+<?php
+$jsondata = file_get_contents("json/photo.json");
+if ($jsondata === false) {
+	die("Error");
+}
+$photos = json_decode($jsondata, true);
+$city = $_GET['city'] ?? 'All';
+if ($city !== 'All') {
+	$photos = array_filter($photos, function($photo) use ($city) {
+		return $photo['city'] === $city;
+	});
+}
+foreach ($photos as $photo):
+	// Local image path
+	$imgPath = 'img/gallery/' . basename($photo['link']);
+	?>
 
-		<a class="photo-item" href="<?php echo htmlspecialchars($flink); ?>" target="_blank">
-			<div class="photo-wrapper">
-				<div class="photo-media">
-					<img src="<?php echo htmlspecialchars($flink); ?>" alt="<?php echo htmlspecialchars($photo['alt']); ?>">
-				</div>
+	<a class="photo-item" href="<?php echo htmlspecialchars($imgPath); ?>" target="_blank">
+		<div class="photo-wrapper">
+			<div class="photo-media">
+				<img src="<?php echo htmlspecialchars($imgPath); ?>" alt="<?php echo htmlspecialchars($photo['alt']); ?>">
 			</div>
-		</a>
+		</div>
+	</a>
 
-	<?php endforeach;?>
-	</div>
+<?php endforeach;?>
+</div>
 	<!-- Latest news section -->
 	
 	<!-- Footer section -->

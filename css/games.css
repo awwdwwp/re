@@ -3,6 +3,10 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
+
+    /* Add these: */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .searchFeed__item {
@@ -64,3 +68,4 @@ body {
     background-color: #7a0c0f !important; 
     color:white !important;
 }
+

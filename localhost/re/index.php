@@ -16,7 +16,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
 
 	
-	<!-- <link rel="stylesheet" href="css/style.css"/> -->
+	<link rel="stylesheet" href="css/style.css"/>
 	
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 	
@@ -31,8 +31,100 @@
 	</div>
 
 	<!-- Header section -->
-	<?php include 'parts/header.html'; ?>
-	<!-- Header section end -->
+	<header class="header-section" style="background-color:rgba(33, 45, 51, 1)">
+		<div class="container" >
+			<!-- logo -->
+			<a class="site-logo" href="index.php">
+				<img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5vjWXmgLzCT1il71p9fi8e/ce4b5ae3a6699d057c368742f3b1bee0/ac_franchise_mobile_logo.png" height="37px" alt="">
+			</a>
+			<div class="user-panel">
+				<a href="#">Login</a>  /  <a href="community.php">Register</a>
+			</div>
+			<!-- responsive -->
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+			<!-- site menu -->
+			<nav class="main-menu">
+				<ul>
+					<li><a href="index.php">Home</a></li>
+					<li><a href="review.php">Games</a></li>
+					<li><a href="categories.php">Gallery</a></li>
+					<li><a href="community.html">Forums</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+		 <style>
+
+.header-section {
+    background-color: rgba(33, 45, 51, 1);
+    height: 70px; /* taller header */
+    display: flex;
+    align-items: center;
+}
+.header-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+			.user-panel {
+	float: right;
+	font-weight: 500;
+	background: #740101 !important;
+	padding: 8px 28px;
+	border-radius: 30px;
+}
+
+.user-panel a {
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.main-menu {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu ul li {
+	display: inline;
+}
+
+.main-menu ul li a {
+	
+	display: inline-block;
+	font-size: 16px;
+	color: #fff;
+	margin-left: 35px;
+	font-weight: 500;
+	padding: 10px 5px;
+}
+
+.main-menu ul li a:hover {
+	color: #ffb320;
+}
+
+.header-btn {
+	float: right;
+	margin-right: 0;
+}
+
+.nav-switch {
+	display: none;
+}
+
+		 </style>
+	</header>	<!-- Header section end -->
 	<!-- <div data-ccid="6DlojvIEfV0lkEzMXCfKTQ" class="moduleCarousel module--media-hero-video-carousel module--seen module--enter-done"><div class="carousel carousel--looping-thumbnail" data-ccid-m="6m3Oz4FBlqIDtNQBbGVm1I" data-ccm-m="carouselMaster"><div class="carousel__slides" data-ccid-l="7bWzSujr9USnRRuLOZHDLk" data-ccm-l="carousel"><div class="carouselSlide carousel--looping-thumbnail carouselSlide--3" data-ccid-l="37R33mQ1pZzUerJoH2OTSo" data-ccm-l="carouselSlide"><div class="carouselSlide__slides__slide" style="background-image: url(&quot;https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1aecXJZGAIIdettbCPkACO/4636e21dca7a01e41181ca22126989c1/Desktop_ACSH_Takeover_Slider3.jpg&quot;);"><div class="carouselSlide__slides__slide__media" style="background-color: rgb(158, 12, 18);"></div><div class="carouselSlide__slides__slide__content"><h2 data-ccf-l="title" style="color: rgb(158, 12, 18);">Discover the digital deluxe edition</h2><div data-ccf-l="content"><p>Enhance your game experience with additional digital content, including legendary gear and weapon sets for both Naoe and Yasuke.</p></div><a aria-label="Buy Now" class="sc-gggouf iWJvHo btn btn-primary carouselSlide__slides__slide__content__btn btn__number--1 external" data-innertext="Buy Now" data-ccid-m="1FZ6g33gyb3qbdqKV30VR0" data-ccm-m="buttonMaster" href="https://store.ubisoft.com/673b49019baa3f5f7f025a29.html" target="blank" rel="noreferrer noopener "><span class="" data-innertext="Buy Now" data-ccid-l="1B8ljSt9h50BSQZWaLJcqi" data-ccm-l="button" data-ccf-l="buttonText">Buy Now</span></a><button aria-label="Watch trailer" class="sc-cyQzhP jPNGvp btn btn-primary carouselSlide__slides__slide__content__btn btn__number--2 youtube-modal" data-innertext="Watch trailer" data-ccid-m="67menp7aIlg2oOWIrZOIP7" data-ccm-m="buttonMaster" type="button"><span class="" data-innertext="Watch trailer" data-ccid-l="2glkqsPmioPKDM7BRrd2z2" data-ccm-l="button" data-ccf-l="buttonText">Watch trailer</span></button><div class="btn btn-primary carouselSlide__slides__slide__content__btn btn__number--3 no-action has-image" data-ccid-m="5PVYg8EzBO89CdLvQiZxtk" data-ccm-m="buttonMaster"><img class="" src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2MJoL1KfnEjtJxKpWfEUyu/c53a985a90bb0f421c6d828e91a711b1/REDlogo_Vertical_AllWhite_NoCrest.png" alt="" loading="lazy"></div></div></div></div></div><div class="carousel__tabs"><div class="carousel__tabs__timer"><ul><li class=""><button class="carousel__tabs__btn" data-ccm-m="buttonMaster" type="button"><h2 data-innertext="Watch the Launch Trailer of AC Shadows">Watch the Launch Trailer of AC Shadows</h2><p>AC Shadows is available now on PS5, Xbox Series X|S, PC including Steam, and more. Buy now!</p><div class=""><img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/20UYtJu5B4St2jVasWOwSz/9492318e3ab35aa92ebde7afc0b645d5/ACSH_Crest_logo_300x378.png" alt="" loading="lazy"><span class="carousel__underline" style="background-color: rgb(158, 12, 18);"></span></div></button></li><li class=""><button class="carousel__tabs__btn" data-ccm-m="buttonMaster" type="button"><h2 data-innertext="Discover the upcoming expansion of AC Shadows">Discover the upcoming expansion of AC Shadows</h2><p>Travel to a new distinctive region - the island of Awaji - a place of mysterious beauty. Feel the tension of being hunted by a new faction, threatening the mysterious island of Awaji. Coming later in 2025.</p><div class=""><img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/20UYtJu5B4St2jVasWOwSz/9492318e3ab35aa92ebde7afc0b645d5/ACSH_Crest_logo_300x378.png" alt="" loading="lazy"><span class="carousel__underline" style="background-color: rgb(158, 12, 18);"></span></div></button></li><li class="is-active"><div class="progress-bar" style="width: 92%; background-color: rgb(158, 12, 18);"></div><progress value="9.2" max="10"></progress><button class="carousel__tabs__btn" data-ccm-m="buttonMaster" type="button"><h2 data-innertext="Discover the digital deluxe edition">Discover the digital deluxe edition</h2><p>Enhance your game experience with additional digital content, including legendary gear and weapon sets for both Naoe and Yasuke.</p><div class="is-active"><img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/20UYtJu5B4St2jVasWOwSz/9492318e3ab35aa92ebde7afc0b645d5/ACSH_Crest_logo_300x378.png" alt="" loading="lazy"><span class="carousel__underline" style="background-color: rgb(158, 12, 18);"></span></div></button></li></ul></div></div><div class="carousel__backward"><button class="carousel__backward__btn" data-ccm-m="buttonMaster" type="button"><svg class="icon icon-arrow-left" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 19 30" role="img" aria-label="Arrow Left"><title>Arrow Left</title><desc>Black arrow pointing left</desc><path d="M15,30L0,15L15,0l4,4L8,15l11,11L15,30z"></path></svg></button></div><div class="carousel__forward"><button class="carousel__forward__btn" data-ccm-m="buttonMaster" type="button"><svg class="icon icon-arrow-right" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 19 30" role="img" aria-label="Arrow Right"><title>Arrow Right</title><desc>Black arrow pointing right</desc><path d="M4,0l15,15L4,30l-4-4l11-11L0,4L4,0z"></path></svg></button></div><div class="carousel__pageCount">3<span>/</span>3</div></div></div>
 	-->
 	
@@ -181,7 +273,7 @@
 	<section class="recent-game-section spad set-bg text-center" style="Background-image: url('https://images5.alphacoders.com/136/1362766.jpeg')">
 		<div class="container cnt">
 			<div class="section-title">
-				
+				<div class="cata new">new</div>
 				<h2 class="text-white" style="font-family: PT Serif, serif; text-transform: uppercase">Recent Games</h2>
 			</div>
 			<div class="row">
@@ -236,7 +328,195 @@
 	<!-- Recent game section end -->
 
 
-	
+	<!-- Tournaments section -->
+	 <!-- 
+	<section class="tournaments-section spad">
+		<div class="container">
+			<div class="tournament-title">Tournaments</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="tournament-item mb-4 mb-lg-0">
+						<div class="ti-notic">Premium Tournament</div>
+						<div class="ti-content">
+							<div class="ti-thumb set-bg" data-setbg="img/tournament/1.jpg"></div>
+							<div class="ti-text">
+								<h4>World Of WarCraft</h4>
+								<ul>
+									<li><span>Tournament Beggins:</span> June 20, 2018</li>
+									<li><span>Tounament Ends:</span> July 01, 2018</li>
+									<li><span>Participants:</span> 10 teams</li>
+									<li><span>Tournament Author:</span> Admin</li>
+								</ul>
+								<p><span>Prizes:</span> 1st place $2000, 2nd place: $1000, 3rd place: $500</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="tournament-item">
+						<div class="ti-notic">Premium Tournament</div>
+						<div class="ti-content">
+							<div class="ti-thumb set-bg" data-setbg="img/tournament/2.jpg"></div>
+							<div class="ti-text">
+								<h4>DOOM</h4>
+								<ul>
+									<li><span>Tournament Beggins:</span> June 20, 2018</li>
+									<li><span>Tounament Ends:</span> July 01, 2018</li>
+									<li><span>Participants:</span> 10 teams</li>
+									<li><span>Tournament Author:</span> Admin</li>
+								</ul>
+								<p><span>Prizes:</span> 1st place $2000, 2nd place: $1000, 3rd place: $500</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+	<!-- Tournaments section bg -->
+
+
+	<!-- Review section -->
+	<!-- 
+	<section class="review-section spad set-bg" data-setbg="img/review-bg.png">
+		<div class="container">
+			<div class="section-title">
+				<div class="cata new">new</div>
+				<h2>Recent Reviews</h2>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="review-item">
+						<div class="review-cover set-bg" data-setbg="img/review/1.jpg">
+							<div class="score yellow">9.3</div>
+						</div>
+						<div class="review-text">
+							<h5>Assasin’’s Creed</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="review-item">
+						<div class="review-cover set-bg" data-setbg="img/review/2.jpg">
+							<div class="score purple">9.5</div>
+						</div>
+						<div class="review-text">
+							<h5>Doom</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="review-item">
+						<div class="review-cover set-bg" data-setbg="img/review/3.jpg">
+							<div class="score green">9.1</div>
+						</div>
+						<div class="review-text">
+							<h5>Overwatch</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="review-item">
+						<div class="review-cover set-bg" data-setbg="img/review/4.jpg">
+							<div class="score pink">9.7</div>
+						</div>
+						<div class="review-text">
+							<h5>GTA</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+	<!-- Review section end -->
+
+
+	<!-- Footer top section --> <!--
+	<section class="footer-top-section">
+		<div class="container">
+			<div class="footer-top-bg">
+				<img src="img/footer-top-bg.png" alt="">
+			</div>
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="footer-logo text-white">
+						<img src="img/footer-logo.png" alt="">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit ame.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="footer-widget mb-5 mb-md-0">
+						<h4 class="fw-title">Latest Posts</h4>
+						<div class="latest-blog">
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="img/latest-blog/1.jpg"></div>
+								<div class="lb-content">
+									<div class="lb-date">June 21, 2018</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
+									<a href="#" class="lb-author">By Admin</a>
+								</div>
+							</div>
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="img/latest-blog/2.jpg"></div>
+								<div class="lb-content">
+									<div class="lb-date">June 21, 2018</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
+									<a href="#" class="lb-author">By Admin</a>
+								</div>
+							</div>
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="img/latest-blog/3.jpg"></div>
+								<div class="lb-content">
+									<div class="lb-date">June 21, 2018</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum </p>
+									<a href="#" class="lb-author">By Admin</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="footer-widget">
+						<h4 class="fw-title">Top Comments</h4>
+						<div class="top-comment">
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="img/authors/1.jpg"></div>
+								<div class="tc-content">
+									<p><a href="#">James Smith</a> <span>on</span>  Lorem ipsum dolor sit amet, co</p>
+									<div class="tc-date">June 21, 2018</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="img/authors/2.jpg"></div>
+								<div class="tc-content">
+									<p><a href="#">James Smith</a> <span>on</span>  Lorem ipsum dolor sit amet, co</p>
+									<div class="tc-date">June 21, 2018</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="img/authors/3.jpg"></div>
+								<div class="tc-content">
+									<p><a href="#">James Smith</a> <span>on</span>  Lorem ipsum dolor sit amet, co</p>
+									<div class="tc-date">June 21, 2018</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="img/authors/4.jpg"></div>
+								<div class="tc-content">
+									<p><a href="#">James Smith</a> <span>on</span>  Lorem ipsum dolor sit amet, co</p>
+									<div class="tc-date">June 21, 2018</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
 	<!-- Footer top section end -->
 
 	<div class="promo__wrapper">
@@ -272,8 +552,16 @@
 	    </div>
 	</div>
 	<!-- Footer section -->
-	<?php include 'parts/footer.html'; ?>
-	<!-- Footer section end -->
+	<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; 2025 Ubisoft. All Rights Reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</footer>	<!-- Footer section end -->
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-3.2.1.min.js"></script>

@@ -265,8 +265,8 @@ ol {
 
 
 body, div {
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0 ;
+    padding: 0 ;
 }
 .carousel-item {
     position: relative;

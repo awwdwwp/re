@@ -1,102 +1,25 @@
 [
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/205123ce-1e3c-4e60-bbec-4262e4c6ecfa/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743730143&Signature=m1yDhoZWPBIai3POr2RBnCkImKc%3D",
-      "alt": "Photo taken in IGA",
-      "city": "IGA"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/a071be1f-f836-4cf0-a313-a24a1c46ee05/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743730458&Signature=a7t9%2BoUM3QAHmgjK1fM4ND9%2BGCM%3D",
-      "alt": "Photo taken in IGA",
-      "city": "IGA"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/e9cb0122-2b7d-4377-a5e0-0b543f2f8632/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743730601&Signature=LkCY0Q4gs1C5TAmh52fKYLC87eE%3D",
-      "alt": "Photo taken in IGA",
-      "city": "IGA"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/46820c46-eef3-4e89-ae96-f8230f0b105b/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743730607&Signature=HiHawwTzKidgXMflmJXvfjj48dU%3D",
-      "alt": "Photo taken in IGA",
-      "city": "IGA"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/6941bea8-0e11-4ac3-a0b2-3c4640e96bb2/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743730609&Signature=OwNkcS2DYU0FcS4M2jCb6ibodIo%3D",
-      "alt": "Photo taken in IGA",
-      "city": "IGA"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/a2712296-e457-4aee-9e68-59f58e46d038/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743730614&Signature=g95eCNm0zkJL0LTMj%2BWTjcJzrN4%3D",
-      "alt": "Photo taken in IGA",
-      "city": "IGA"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/1f4438a3-e9be-42bf-a827-57ddab0e8dde/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743730722&Signature=%2FXlsYcfZyApF29S2ym6SieyH2VM%3D",
-      "alt": "Photo taken in HARIMA",
-      "city": "HARIMA"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/f1129563-5e67-4e39-93bf-589005256d2d/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743730724&Signature=VCy3BsO6DklGyUL621GDZkM7vpA%3D",
-      "alt": "Photo taken in HARIMA",
-      "city": "HARIMA"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/e276a524-818b-4f15-9bbe-c9be0f988a80/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743730727&Signature=qm1q2nXWbkfOKISmn8JMfcqGlUc%3D",
-      "alt": "Photo taken in HARIMA",
-      "city": "HARIMA"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/16c412ab-6cbf-463c-9f6b-75aefc7a7a9e/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743789641&Signature=kJbLhWJoy1GePGf8oprjiZC9O%2FU%3D",
-      "alt": "Photo taken in HARIMA",
-      "city": "HARIMA"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/bd6c616e-2edb-40bc-b9ea-ef7941cc4be2/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743730741&Signature=EIs0TfP%2F0BGP%2FGi6XCL3FkVkJjs%3D",
-      "alt": "Photo taken in HARIMA",
-      "city": "HARIMA"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/8d8bc4d1-4143-4918-8600-b8c162c72196/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743731122&Signature=oi9YmqleFbAMt1baoQIWuX31uB4%3D",
-      "alt": "Photo taken in Izumi Settsu",
-      "city": "IZUMI"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/7b99c321-04a1-4f53-bb53-08cee514e18c/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743731125&Signature=nDZUdF98SwaEbFpd30b9fuuJPoc%3D",
-      "alt": "Photo taken in Izumi Settsu",
-      "city": "IZUMI"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/f5b8922b-c415-48ad-92c4-63fd7d2bdeef/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743731134&Signature=p%2BDE6gJQoSfY05%2Fx1DgEV%2FIUW5s%3D",
-      "alt": "Photo taken in Izumi Settsu",
-      "city": "IZUMI"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/8f0d57b2-8bb6-4695-b2a7-eb8b19462fab/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743731139&Signature=OAMHOvjJZnijo6sm0aK76DEyP8E%3D",
-      "alt": "Photo taken in Izumi Settsu",
-      "city": "IZUMI"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/175a2710-cbb8-4187-884b-d64d7f12b5d2/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743730987&Signature=sldF5P8OQ%2Bv%2FhAisvrIraBD4xoc%3D",
-      "alt": "Photo taken in Izumi Settsu",
-      "city": "IZUMI"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/eefd7349-2765-42a8-bce3-4ce9929d7dd0/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743731533&Signature=kzMhJbk87Xa0EBVhfzQCCNKuWXM%3D",
-      "alt": "Photo taken in Yamashiro",
-      "city": "YAMASHIRO"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/ae3c2de4-505c-4426-926d-2ddbf77e0cbf/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743731536&Signature=UqXAo54kVodu4KWWup9EPnZ9OK4%3D",
-      "alt": "Photo taken in Yamashiro",
-      "city": "YAMASHIRO"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/eeda1c1e-b23b-49e1-a730-69818047a7b5/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743731538&Signature=FNhf5snqbqeJQ%2F%2FUjSXOaO%2BqbDw%3D",
-      "alt": "Photo taken in Yamashiro",
-      "city": "YAMASHIRO"
-    },
-    {
-      "link": "https://harbour-ugc-content-prod.s3.amazonaws.com/1a99b369-2931-4b22-96a4-9a0b58e586e8/photo/6a9ca30d-79a8-4147-886e-b0d23af5aa0d/data?AWSAccessKeyId=AKIAZ53SMYQH4DTE6LP2&Expires=1743731544&Signature=haE8IUSS37GkMcnHAIwrA7p%2BFwM%3D",
-      "alt": "Photo taken in Yamashiro",
-      "city": "YAMASHIRO"
-    }
+  { "link": "/img/gallery/iga1.jfif", "alt": "Photo taken in IGA", "city": "IGA" },
+  { "link": "/img/gallery/iga2.jfif", "alt": "Photo taken in IGA", "city": "IGA" },
+  { "link": "/img/gallery/iga3.jfif", "alt": "Photo taken in IGA", "city": "IGA" },
+  { "link": "/img/gallery/iga4.jfif", "alt": "Photo taken in IGA", "city": "IGA" },
+  { "link": "/img/gallery/iga5.jfif", "alt": "Photo taken in IGA", "city": "IGA" },
+  { "link": "/img/gallery/iga6.jfif", "alt": "Photo taken in IGA", "city": "IGA" },
+
+  { "link": "/img/gallery/harima1.jfif", "alt": "Photo taken in HARIMA", "city": "HARIMA" },
+  { "link": "/img/gallery/harima2.jfif", "alt": "Photo taken in HARIMA", "city": "HARIMA" },
+  { "link": "/img/gallery/harima3.jfif", "alt": "Photo taken in HARIMA", "city": "HARIMA" },
+  { "link": "/img/gallery/harima4.jfif", "alt": "Photo taken in HARIMA", "city": "HARIMA" },
+  { "link": "/img/gallery/harima5.jfif", "alt": "Photo taken in HARIMA", "city": "HARIMA" },
+
+  { "link": "/img/gallery/izumi1.jfif", "alt": "Photo taken in IZUMI", "city": "IZUMI" },
+  { "link": "/img/gallery/izumi2.jfif", "alt": "Photo taken in IZUMI", "city": "IZUMI" },
+  { "link": "/img/gallery/izumi3.jfif", "alt": "Photo taken in IZUMI", "city": "IZUMI" },
+  { "link": "/img/gallery/izumi4.jfif", "alt": "Photo taken in IZUMI", "city": "IZUMI" },
+  { "link": "/img/gallery/izumi5.jfif", "alt": "Photo taken in IZUMI", "city": "IZUMI" },
+
+  { "link": "/img/gallery/yamashiro1.jfif", "alt": "Photo taken in YAMASHIRO", "city": "YAMASHIRO" },
+  { "link": "/img/gallery/yamashiro2.jfif", "alt": "Photo taken in YAMASHIRO", "city": "YAMASHIRO" },
+  { "link": "/img/gallery/yamashiro3.jfif", "alt": "Photo taken in YAMASHIRO", "city": "YAMASHIRO" },
+  { "link": "/img/gallery/yamashiro4.jfif", "alt": "Photo taken in YAMASHIRO", "city": "YAMASHIRO" }
 ]

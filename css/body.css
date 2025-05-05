@@ -1,22 +1,171 @@
-.main-menu ul li a {
-    text-decoration: none !important;
-}
-.user-panel {
-    background-color: #7a0c0f;
-    color:white;
+
+.recent-game-section {
+	background-color: #eef2f6;
+	border-top: 1px solid #d6dee7;
+	border-bottom: 1px solid #d6dee7;
 }
 
-.user-panel a {
-    color:white;
-}
-.header-section {
-    border-bottom: 2px solid #000000;
+.recent-game-item .rgi-thumb {
+	height: 204px;
+	padding: 25px 28px;
 }
 
-/*body */
+.recent-game-item .rgi-content {
+	padding: 34px 22px 20px;
+	background: #fff;
+	border: 1px solid #d6dee7;
+	border-top: none;
+	position: relative;
+}
+
+.recent-game-item .rgi-content h5 {
+	margin-bottom: 20px;
+	line-height: 1.5;
+}
+
+.recent-game-item .rgi-content .comment {
+	font-size: 12px;
+	color: #737373;
+}
+
+.recent-game-item .rgi-extra {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 70px;
+}
+
+.recent-game-item .rgi-extra .rgi-star,
+.recent-game-item .rgi-extra .rgi-heart {
+	height: 35px;
+	width: 35px;
+	float: left;
+	display: block;
+	padding: 6px 8px 0;
+}
+
+.recent-game-item .rgi-extra .rgi-star {
+	background: #ffb320;
+}
+
+.recent-game-item .rgi-extra .rgi-heart {
+	background: #ff205f;
+}
+
+.feature-item {
+	height: 415px;
+	position: relative;
+}
+
+.feature-item:after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: #000;
+	opacity: .65;
+}
+
+.feature-item .cata {
+	position: relative;
+	margin-top: 28px;
+	margin-left: 29px;
+	z-index: 3;
+}
+
+.feature-item .fi-content {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	padding: 0 26px 24px;
+	z-index: 2;
+}
+
+.feature-item .fi-content h5 {
+	margin-bottom: 18px;
+}
+
+.feature-item .fi-content .fi-comment {
+	font-size: 12px;
+	opacity: .54;
+}
+
+
+.latest-news-section {
+	overflow: hidden;
+	display: block;
+	clear: both;
+	background: #131313;
+	padding: 24px 0;
+	position: relative;
+}
+
+.ln-title {
+	position: absolute;
+	height: 100%;
+	width: 29%;
+	left: 0;
+	top: 0;
+	text-align: right;
+	padding-top: 24px;
+	padding-right: 66px;
+	font-size: 18px;
+	font-weight: 500;
+	color: #fff;
+	background: #550000;
+	z-index: 1;
+}
+
+.news-ticker {
+	width: 71%;
+	float: right;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.news-ticker-contant .nt-item {
+	margin-right: 35px;
+	color: #fff;
+	display: inline-block;
+}
+
+.news-ticker-contant .nt-item span {
+	margin-right: 35px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 500;
+	color: #fff;
+	padding: 4px 20px;
+}
+
+.news-ticker-contant .nt-item span.new {
+	background: #ff205f;
+}
+
+.news-ticker-contant .nt-item span.strategy {
+	background: #4eae60;
+}
+
+.news-ticker-contant .nt-item span.racing {
+	background: #694eae;
+}
+
+.container.cnt:hover .recent-game-item {
+    filter:blur(5px) ;
+}
+.recent-game-item:hover {
+    scale: 1.1;
+    filter:blur(0px) !important;
+    box-shadow: 0px 0px 20px 10px rgba(95, 0, 0, 0.534);
+}
 .ln-title {
     background: linear-gradient(to right,  rgba(68, 0, 3, 0.281), rgba(158, 12, 18, 0.8));
     backdrop-filter: blur(10px);
+    
 }
 .latest-news-section {
     background-color: rgba(33, 45, 51, 1);
@@ -52,16 +201,11 @@
     width: 35% !important;
 }
 
+/*body */
 
 
-.container.cnt:hover .recent-game-item {
-    filter:blur(5px) ;
-}
-.recent-game-item:hover {
-    scale: 1.1;
-    filter:blur(0px) !important;
-    box-shadow: 0px 0px 20px 10px rgba(95, 0, 0, 0.534);
-}
+
+
 
 .promo__wrapper {
     margin-top: 15rem;
@@ -152,4 +296,48 @@
 body {
     margin:0 !important; 
     padding:0 !important;
+}
+.recent-game-item .rgi-content h5,
+.recent-game-item .rgi-content .comment {
+    color: #333; /* Change to a neutral color like dark gray */
+}
+.promo__wrapper {
+    margin-top: 5rem; /* Reduced from 15rem */
+}
+
+.latest-news-section {
+    padding: 20px 0; /* Adjusted padding */
+}
+
+.feature-item {
+    margin-bottom: 30px; /* Adjusted margin for spacing */
+}
+
+h5 a {
+    color: white;
+}
+.fi-comment {
+    color:white;
+}
+
+.recent-game-section {
+    padding-block: 60px;
+}
+
+.cata {
+    color:white;
+}
+
+.feature-section {
+    padding-block: 60px;
+}
+h5 {
+    color:white !important;
+}
+
+.rgi-star img, .rgi-heart img {
+    height:10px !important;
+}
+.recent-game-item {
+    max-width: 390px !important;
 }
