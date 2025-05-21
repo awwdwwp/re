@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Twitter",
+        "url": "https://assassinscreed.com/twitter",
+        "img": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7MSfSWhXCnKkoVagD3E6lJ/89e71af79d43bee32f99824ffdaccd4d/_Ubisoft__global_twitter_logo.png"
+    },
+    {
+        "name": "Facebook",
+        "url": "https://assassinscreed.com/facebook",
+        "img": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/32xRzuzxNUJYa3QO5iY8B5/de15e78cd700a515789ce60bd8e57e80/_Ubisoft__global_facebook_logo.png"
+    },
+    {
+        "name": "Twitch",
+        "url": "https://assassinscreed.com/twitch",
+        "img": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7qD6KHarSZ9h2uc7G5o20C/c9c34183556205635d0042b498b8a9fa/_Ubisoft__global_twitch_logo.webp"
+    },
+    {
+        "name": "Instagram",
+        "url": "https://assassinscreed.com/instagram",
+        "img": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6htnsL4NtlpGqIG7nehH4y/c429c1eab3e0422b745a0b14a51a47ee/_Ubisoft__global_instagram_logo.png"
+    },
+    {
+        "name": "YouTube",
+        "url": "https://assassinscreed.com/yt-playlist",
+        "img": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/68qlJsyTv8sTv54rqqfOPO/01a04e004de9c60cf0854a444bd1b778/_Ubisoft__global_youtube_logo.png"
+    },
+    {
+        "name": "TikTok",
+        "url": "https://assassinscreed.com/tiktok",
+        "img": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2y2VH4Yqqf7yZzMVw3muFA/c5c7bac8b2dd3956378b5d1562d8fee0/ubisoft-tiktok-social-icon.png"
+    },
+    {
+        "name": "Reddit",
+        "url": "https://assassinscreed.com/reddit",
+        "img": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3YvZrNQQJksMvgNxZogXsr/e64d76607cf0b5416618dc3ce1ba96af/ubisoft-global-social_icon-reddit-v2.png"
+    },
+    {
+        "name": "Discord",
+        "url": "https://assassinscreed.com/discord",
+        "img": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2v7txZYbSOAjPG6dkzkE9a/73206e476307830f4d82cca565b70666/social-icon-discord.png"
+    }
+]

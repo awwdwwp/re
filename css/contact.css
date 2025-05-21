@@ -1,0 +1,42 @@
+body {
+    background-image: url(https://static-dm.ubisoft.com/assassins-creed/franchise/prod/b7db6092b3081a637071c8a88a9270a0.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50%;
+    font-family: "ubisoft_sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+/* Center the page content */
+.page-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Center contact form and info inside the container */
+.contact-page .row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Make both sides take equal width on large screens */
+.contact-page .col-lg-4,
+.contact-page .col-lg-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Optional: center the send button */
+.contact-form-warp .site-btn {
+    display: block;
+    margin: 20px auto 0 auto;
+}

@@ -13,11 +13,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
-	<link rel="stylesheet" href="css/animate.css"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="css/contact.css"/>
+	<!-- <link rel="stylesheet" href="css/carousel.css"/> ->
 
 
 	<!--[if lt IE 9]>
@@ -37,7 +36,7 @@
 	<!-- Header section end -->
 
 
-	<!-- Latest news section -->
+	<!-- Latest news section 
 	<div class="latest-news-section">
 		<div class="ln-title">Latest News</div>
 		<div class="news-ticker">
@@ -48,7 +47,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- Latest news section end -->
+	 Latest news section end -->
 
 
 	<!-- Page info section -->
@@ -211,15 +210,14 @@
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.marquee.min.js"></script>
-	<script src="js/main.js"></script>
-
-
-	<!-- load for map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWTIlluowDL-X4HbYQt3aDw_oi2JP0Krc&sensor=false"></script>
-	<script src="js/map.js"></script>
+	<!-- <script src="js/bootstrap.min.js"></script> -->
+	<!-- <script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.marquee.min.js"></script> -->
+	<!-- <script src="js/main.js"></script> -->
+	<script src="js/new.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+	
 
     </body>
 </html>

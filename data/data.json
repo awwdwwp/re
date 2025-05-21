@@ -2,11 +2,19 @@
     "otazky": [
         "What is the story behind Assassin's Creed Shadows?",
         "Who is the main protagonist in Assassin's Creed Shadows?",
-        "What new gameplay features were introduced in Assassin's Creed Shadows?"
+        "What new gameplay features were introduced in Assassin's Creed Shadows?",
+        "What are the contents of Assassin's Creed Shadows editions?",
+        "What are the system requirements for Assassin's Creed Shadows?",
+        "What are the minimum requirements for Assassin's Creed Shadows?",
+        "How can I report a bug in Assassin's Creed Shadows?"
     ],
     "odpovede": [
         "Assassin's Creed Shadows follows a new narrative that blends the old-world tactics of assassins with new stealth-based mechanics.",
         "The main protagonist is a character named Naoe, who seeks revenge while uncovering dark secrets about the mysterious box stolen from her.",
-        "In Assassin's Creed Shadows, new stealth mechanics such as light and shadow manipulation, as well as parkour-focused combat, have been introduced."
+        "In Assassin's Creed Shadows, new stealth mechanics such as light and shadow manipulation, as well as parkour-focused combat, have been introduced.",
+        "There are multiple game editions of Assassin's Creed Shadows:\n\n• Standard Edition:\n  - Assassin's Creed Shadows (base game)\n\n• Digital Deluxe Edition:\n  - Assassin's Creed Shadows (base game)",
+        "Minimum requirements (1080p at 30 FPS, Low graphics preset): Windows 10 or 11 (64-bit), AMD Ryzen 5 3600 or Intel Core i7-8700k, 16 GB RAM (dual-channel), AMD RX 5700, Intel Arc A580, or NVIDIA GTX 1070 (8 GB), SSD required, DirectX 12.",
+        "Operating system: Windows 10/11 (64-bit), Processor: AMD Ryzen 5 3600 or Intel Core i7-8700k, RAM: 16 GB (dual-channel), GPU: RX 5700, Arc A580, or GTX 1070 (8 GB), SSD: required, DirectX: 12.",
+        "You can report issues on the official Assassin's Creed Shadows bug reporter website to help the developers improve the game."
     ]
 }

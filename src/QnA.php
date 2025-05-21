@@ -21,7 +21,7 @@ class QnA {
     
         try {
             $this->conn = new PDO('mysql:host=' . $config['HOST'] . ';dbname=' . $config['DBNAME'] . ';port=' . $config['PORT'], $config['USER_NAME'], $config['PASSWORD'], $options);
-            echo "Connection established.<br>";
+            //echo "Connection established.<br>";
         } catch (PDOException $e) {
             die("Connection error: " . $e->getMessage());
         }
@@ -33,20 +33,22 @@ class QnA {
             $questions = $data["otazky"];
             $answers = $data["odpovede"];
             $this->conn->beginTransaction();
-            $sql = "INSERT INTO qna (otazka, odpoved) 
-                    SELECT :otazka, :odpoved 
-                    FROM dual
+    
+            $sql = "INSERT INTO qna (otazka, odpoved)
+                    SELECT * FROM (SELECT :otazka AS otazka, :odpoved AS odpoved) AS tmp
                     WHERE NOT EXISTS (
                         SELECT 1 FROM qna WHERE otazka = :otazka
                     )";
+    
             $statement = $this->conn->prepare($sql); 
             for ($i = 0; $i < count($questions); $i++) {
                 $statement->bindParam(':otazka', $questions[$i]);
                 $statement->bindParam(':odpoved', $answers[$i]);
                 $statement->execute();
             }
+    
             $this->conn->commit();
-            echo "Data was inserted successfully!";
+            //echo "Data was inserted successfully!";
         } catch (Exception $e) {  
             echo "Error while inserting data: " . $e->getMessage();
             $this->conn->rollback(); 
@@ -57,10 +59,8 @@ class QnA {
 
     public function getQnA() {
         try {
-    
             if ($this->conn === null) {
-                echo "Database connection is not established. Please check the connection.<br>";
-                return [];  
+                $this->connect();
             }
     
             $sql = "SELECT * FROM qna";
@@ -68,8 +68,8 @@ class QnA {
             $statement->execute();
             $questionsAndAnswers = $statement->fetchAll(PDO::FETCH_ASSOC);
     
-            return $statement->fetchAll(PDO::FETCH_ASSOC);
-        } catch (\Exception $e) {  
+            return $questionsAndAnswers;
+        } catch (\Exception $e) {
             die("Error: " . $e->getMessage());
         }
     }
