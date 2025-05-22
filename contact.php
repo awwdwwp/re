@@ -57,7 +57,7 @@
 				<div class="row">
 					<div class="col-xl-5 col-lg-6 text-white">
 						<h2>Contact us</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum.</p>
+						<p>If you have any questions or just want to say hello, feel free to reach out. Our team is here to help you with any inquiries or support you may need.</p>
 					</div>
 				</div>
 			</div>
@@ -73,7 +73,7 @@
 			<div class="row">
 				<div class="col-lg-4 mb-5 mb-lg-0">
 					<h4 class="comment-title">Contact us</h4>
-					<p>Odio ultrices ut. Etiam ac erat ut enim maximus accumsan vel ac nisl. Duis feug iat bibendum orci, non elementum urna. Cras sit amet sapien aliquam.</p>
+					<p>Have questions about our services, feedback, or a partnership idea? We're always ready to hear from you. Let us know how we can assist.</p>
 					<div class="row">
 						<div class="col-md-9">
 							<ul class="contact-info-list">
@@ -81,32 +81,25 @@
 								<li><div class="cf-left">Phone</div><div class="cf-right">+53 345 7953 32453</div></li>
 								<li><div class="cf-left">E-mail</div><div class="cf-right">yourmail@gmail.com</div></li>
 							</ul>
+							<a href="public/qna.php" class="btn btn-primary p-3 px-5 mt-2">Go to QnA</a>
 						</div>
 					</div>
-					<div class="social-links">
-						<a href="#"><i class="fa fa-pinterest"></i></a>
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-dribbble"></i></a>
-						<a href="#"><i class="fa fa-behance"></i></a>
-						<a href="#"><i class="fa fa-linkedin"></i></a>
-					</div>
+					
 				</div>
 				<div class="col-lg-8">
 					<div class="contact-form-warp">
 						<h4 class="comment-title">Leave a Reply</h4>
-						<form class="comment-form">
+						<form class="comment-form" method="POST" action="submit_contact.php">
 							<div class="row">
 								<div class="col-md-6">
-									<input type="text" placeholder="Name">
+									<input type="text" name="name" placeholder="Name" required>
 								</div>
 								<div class="col-md-6">
-									<input type="email" placeholder="Email">
+									<input type="email" name="email" placeholder="Email" required>
 								</div>
 								<div class="col-lg-12">
-									<input type="text" placeholder="Subject">
-									<textarea placeholder="Message"></textarea>
-									<button class="site-btn btn-sm">Send</button>
+									<textarea name="message" placeholder="Message" required></textarea>
+									<button class="site-btn btn-sm" type="submit">Send</button>
 								</div>
 							</div>
 						</form>
@@ -119,7 +112,7 @@
 
 
 	<!-- Footer top section -->
-	<section class="footer-top-section">
+	<!-- <section class="footer-top-section">
 		<div class="container">
 			<div class="footer-top-bg">
 				<img src="img/footer-top-bg.png" alt="">
@@ -199,7 +192,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- Footer top section end -->
 
 	
