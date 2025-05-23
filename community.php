@@ -33,7 +33,7 @@
 	<!-- Page Preloder -->
 	<div class="page-wrapper">
 	<!-- Header section -->
-	<?php include 'parts/header.html'; ?>
+	<?php include 'parts/header.php'; ?>
 	<!-- Header section end -->
 	<main class="container">
     <div class="logo" role="img" aria-label="Ubisoft Logo"></div>

@@ -39,7 +39,7 @@
 	
 
 	<!-- Header section -->
-	<?php include 'parts/header.html'; ?>
+	<?php include 'parts/header.php'; ?>
 	<!-- Header section end -->
 	<div class="formc">
 		<form method="GET">
@@ -56,6 +56,13 @@
 </div>
 <div class="text-center mb-5">
 <?php
+	if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+	require_once(__DIR__ . '/db/config.php');
+	require_once(__DIR__ . '/src/Database.php');
+	use core\Database;
 $jsondata = file_get_contents("json/photo.json");
 if ($jsondata === false) {
 	die("Error");
@@ -67,20 +74,67 @@ if ($city !== 'All') {
 		return $photo['city'] === $city;
 	});
 }
+
 foreach ($photos as $photo):
-	// Local image path
-	$imgPath = 'img/gallery/' . basename($photo['link']);
-	?>
+    $imgPath = 'img/gallery/' . basename($photo['link']);
+    $imageName = basename($photo['link']); 
+?>
+    <a class="photo-item" href="<?php echo htmlspecialchars($imgPath); ?>" target="_blank">
+        <div class="photo-wrapper">
+            <div class="photo-media">
+                <img src="<?php echo htmlspecialchars($imgPath); ?>" alt="<?php echo htmlspecialchars($photo['alt']); ?>">
+            </div>
+        </div>
+    </a>
 
-	<a class="photo-item" href="<?php echo htmlspecialchars($imgPath); ?>" target="_blank">
-		<div class="photo-wrapper">
-			<div class="photo-media">
-				<img src="<?php echo htmlspecialchars($imgPath); ?>" alt="<?php echo htmlspecialchars($photo['alt']); ?>">
-			</div>
-		</div>
-	</a>
+    
+    <div class="comments" style="margin-bottom: 1.5rem;">
+       <?php  
+        $db = new Database('contact');
+        $conn = $db->getConnection();
 
-<?php endforeach;?>
+        $stmt = $conn->prepare("SELECT comments.*, users.name FROM comments JOIN users ON comments.user_id = users.id WHERE image_name = ? ORDER BY created_at DESC");
+        $stmt->execute([$imageName]);
+        $comments = $stmt->fetchAll();
+
+        foreach ($comments as $comment): ?>
+            <div class="comment bg-light p-2 mb-1 text-start">
+                <strong><?php echo htmlspecialchars($comment['name']); ?>:</strong>
+                <?php echo nl2br(htmlspecialchars($comment['comment'])); ?>
+                <br><small><?php echo $comment['created_at']; ?></small>
+
+                <?php
+                if (isset($_SESSION['user'])) {
+                    $isAdmin = ($_SESSION['user']['email'] === 'admin@example.com');
+                    $isOwner = $_SESSION['user']['id'] === $comment['user_id'];
+
+                    if ($isOwner || $isAdmin): ?>
+                        
+                        <div>
+                            <a href="edit_comment.php?id=<?php echo $comment['id']; ?>">Edit</a>
+                            <?php if ($isAdmin): ?>
+                                | <a href="delete_comment.php?id=<?php echo $comment['id']; ?>">Delete</a>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif;
+                }
+                ?>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    <!-- 🔽 Add Comment Form -->
+    <?php if (isset($_SESSION['user'])): ?>
+        <form action="submit_comment.php" method="POST" class="mb-5">
+            <input type="hidden" name="image" value="<?php echo htmlspecialchars($imageName); ?>">
+            <textarea name="comment" placeholder="Write a comment..." required class="form-control mb-2"></textarea>
+            <button type="submit" class="btn btn-primary btn-sm">Post Comment</button>
+        </form>
+    <?php else: ?>
+        <p><em><a href="login.php">Log in</a> to write a comment.</em></p>
+    <?php endif; ?>
+
+<?php endforeach; ?>
 </div>
 	<!-- Latest news section -->
 	

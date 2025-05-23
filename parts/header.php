@@ -4,9 +4,16 @@
 			<a class="site-logo" href="index.php">
 				<img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5vjWXmgLzCT1il71p9fi8e/ce4b5ae3a6699d057c368742f3b1bee0/ac_franchise_mobile_logo.png" height="37px" alt="">
 			</a>
+			<?php session_start(); ?>
 			<div class="user-panel">
-				<a href="#">Login</a>  /  <a href="community.php">Register</a>
+			    <?php if (isset($_SESSION['user'])): ?>
+			        Welcome, <?= htmlspecialchars($_SESSION['user']['name']) ?> /
+			        <a href="logout.php">Logout</a>
+			    <?php else: ?>
+			        <a href="login.php">Login</a> / <a href="register.php">Register</a>
+			    <?php endif; ?>
 			</div>
+
 			<!-- responsive -->
 			<div class="nav-switch">
 				<i class="fa fa-bars"></i>

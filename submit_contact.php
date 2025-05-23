@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($name && $email && $message) {
         $contact = new Contact();
         $contact->saveMessage($name, $email, $message);
-        // header("Location: thank_you.php"); 
+        header("Location: thank_you.php"); 
         exit;
     } else {
         echo "Please fill in all fields.";

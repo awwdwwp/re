@@ -33,7 +33,7 @@
 	</div>
 
 	<!-- Header section -->
-	<?php include 'parts/header.html'; ?>
+	<?php include 'parts/header.php'; ?>
 	<!-- Header section end -->
 
 

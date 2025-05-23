@@ -97,3 +97,16 @@ button:hover {
     padding-bottom: 0px !important;
 }
 
+
+.form-control, .comments {
+    width: 30%;
+    margin: 0 auto 1.5rem auto;
+}
+
+.photo-media img {
+    transition: transform 0.3s ease;
+}
+
+.photo-media img:hover {
+    transform: scale(1.1); /* 10% bigger */
+}

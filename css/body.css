@@ -354,3 +354,6 @@ h5 {
     max-width: 390px !important;
 }
 
+.photo-item img:hover{
+	scale:1.2;
+}
