@@ -62,7 +62,16 @@
 
 	require_once(__DIR__ . '/db/config.php');
 	require_once(__DIR__ . '/src/Database.php');
-	use core\Database;
+	require_once(__DIR__ . '/src/Comment.php');
+	require_once(__DIR__ . '/src/CommentManager.php');
+
+use core\Database;
+use core\CommentManager;
+
+$db = new Database('contact');
+$conn = $db->getConnection();
+$commentManager = new CommentManager($conn);
+$editingId = $_GET['edit'] ?? null;
 $jsondata = file_get_contents("json/photo.json");
 if ($jsondata === false) {
 	die("Error");
@@ -90,31 +99,39 @@ foreach ($photos as $photo):
     
     <div class="comments" style="margin-bottom: 1.5rem;">
        <?php  
-        $db = new Database('contact');
-        $conn = $db->getConnection();
+        $comments = $commentManager->getCommentsForImage($imageName);
 
-        $stmt = $conn->prepare("SELECT comments.*, users.name FROM comments JOIN users ON comments.user_id = users.id WHERE image_name = ? ORDER BY created_at DESC");
-        $stmt->execute([$imageName]);
-        $comments = $stmt->fetchAll();
-
-        foreach ($comments as $comment): ?>
-            <div class="comment bg-light p-2 mb-1 text-start">
-                <strong><?php echo htmlspecialchars($comment['name']); ?>:</strong>
-                <?php echo nl2br(htmlspecialchars($comment['comment'])); ?>
-                <br><small><?php echo $comment['created_at']; ?></small>
+	    foreach ($comments as $comment): ?>
+	    	<div class="comment bg-light p-2 mb-1 text-start">
+	    	    <strong><?php echo htmlspecialchars($comment->getUserName()); ?>:</strong>
+				<?php echo nl2br(htmlspecialchars($comment->getComment())); ?>
+				<br><small><?php echo $comment->getCreatedAt(); ?></small>
 
                 <?php
                 if (isset($_SESSION['user'])) {
-                    $isAdmin = ($_SESSION['user']['email'] === 'admin@example.com');
-                    $isOwner = $_SESSION['user']['id'] === $comment['user_id'];
+                    $isAdmin = ($_SESSION['user']['role'] ?? '') === 'admin';
+                    $isOwner = $_SESSION['user']['id'] === $comment->getUserId();
 
                     if ($isOwner || $isAdmin): ?>
                         
                         <div>
-                            <a href="edit_comment.php?id=<?php echo $comment['id']; ?>">Edit</a>
-                            <?php if ($isAdmin): ?>
-                                | <a href="delete_comment.php?id=<?php echo $comment['id']; ?>">Delete</a>
-                            <?php endif; ?>
+                            <?php if (isset($editingId) && $editingId == $comment->getId() && ($isOwner || $isAdmin)): ?>
+							    <!-- Inline Edit Form -->
+						    <form action="submit_edit.php" method="POST" class="mb-2">
+							    <input type="hidden" name="id" value="<?php echo $comment->getId(); ?>">
+							    <textarea name="comment" class="form-control mb-1" required><?php echo htmlspecialchars($comment->getComment()); ?></textarea>
+							    <button type="submit" class="btn btn-sm btn-success">Save</button>
+							    <a href="categories.php" class="btn btn-sm btn-secondary">Cancel</a>
+							</form>
+						<?php else: ?>
+						    <a href="?edit=<?php echo $comment->getId(); ?>">Edit</a>
+							<?php if ($isAdmin): ?>
+							    <form method="POST" action="delete_comment.php" style="display:inline;">
+								    <input type="hidden" name="comment_id" value="<?php echo $comment->getId(); ?>">
+								    <button type="submit" onclick="return confirm('Delete this comment?')" class="btn btn-link btn-sm p-0 m-0 align-baseline">Delete</button>
+								</form>
+							<?php endif; ?>
+						<?php endif; ?>
                         </div>
                     <?php endif;
                 }

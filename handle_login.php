@@ -18,7 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['user'] = [
             'id' => $authenticatedUser['id'],
             'name' => $authenticatedUser['name'],
-            'email' => $authenticatedUser['email']
+            'email' => $authenticatedUser['email'],
+            'role' => $authenticatedUser['role'] 
         ];
         header('Location: index.php'); 
         exit;

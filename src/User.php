@@ -23,7 +23,7 @@ class User {
 
     public function login($email, $password) {
         try {
-            $stmt = $this->conn->prepare("SELECT id, name, email, password_hash FROM users WHERE email = ?");
+            $stmt = $this->conn->prepare("SELECT id, name, email, password_hash, role FROM users WHERE email = ?");
             $stmt->execute([$email]);
             $user = $stmt->fetch();
 

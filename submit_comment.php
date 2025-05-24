@@ -1,33 +1,32 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['user'])) {
-    header("Location: login.php");
-    exit;
-}
-
-require_once(__DIR__ . '/db/config.php');
 require_once(__DIR__ . '/src/Database.php');
+require_once(__DIR__ . '/src/Comment.php');
+require_once(__DIR__ . '/src/CommentManager.php');
 
 use core\Database;
+use core\Comment;
+use core\CommentManager;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $userId = $_SESSION['user']['id'];
-    $image = trim($_POST['image']);
-    $comment = trim($_POST['comment']);
+if (!isset($_SESSION['user'])) {
+    header('Location: login.php');
+    exit;
+}
 
-    if ($image === '' || $comment === '') {
-        die("Invalid data.");
-    }
-
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['comment']) && !empty($_POST['image'])) {
     $db = new Database('contact');
     $conn = $db->getConnection();
+    $manager = new CommentManager($conn);
 
-    $stmt = $conn->prepare("INSERT INTO comments (user_id, image_name, comment) VALUES (?, ?, ?)");
-    $stmt->execute([$userId, $image, $comment]);
+    $comment = new Comment(
+        $_POST['comment'],
+        $_SESSION['user']['id'],
+        $_SESSION['user']['name'],
+        $_POST['image']
+    );
 
-    header("Location: gallery.php"); // Or wherever your gallery page is
-    exit;
-} else {
-    echo "Invalid request.";
+    $manager->addComment($comment);
 }
+
+header('Location: categories.php');
+exit;
