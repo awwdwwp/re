@@ -19,7 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'id' => $authenticatedUser['id'],
             'name' => $authenticatedUser['name'],
             'email' => $authenticatedUser['email'],
-            'role' => $authenticatedUser['role'] 
+            'role' => $authenticatedUser['role'],
+            'profile_picture' => $authenticatedUser['profile_picture'] ?? 'default.png'
         ];
         header('Location: index.php'); 
         exit;

@@ -30,9 +30,9 @@ class CommentManager {
         if (!$existing) return false;
 
         $isOwner = $existing['user_id'] === $user['id'];
-        $isAdmin = $user['email'] === 'admin@example.com';
+        
 
-        if ($isOwner || $isAdmin) {
+        if ($isOwner ) {
             $update = $this->conn->prepare("UPDATE comments SET comment = ? WHERE id = ?");
             return $update->execute([$newText, $id]);
         }
@@ -49,7 +49,7 @@ class CommentManager {
         if (!$existing) return false;
         
         $isOwner = $existing['user_id'] === $user['id'];
-        $isAdmin = ($user['role'] ?? '') === 'admin';
+        $isAdmin = ($_SESSION['user']['role'] ?? '') === 'admin';
         
         if ($isOwner || $isAdmin) {
             $delete = $this->conn->prepare("DELETE FROM comments WHERE id = ?");
@@ -61,11 +61,11 @@ class CommentManager {
 
     public function getCommentsForImage(string $imageName): array {
     $stmt = $this->conn->prepare(
-        "SELECT comments.*, users.name 
-         FROM comments 
-         JOIN users ON comments.user_id = users.id 
-         WHERE image_name = ? 
-         ORDER BY created_at DESC"
+    "SELECT c.*, u.name AS user_name, u.profile_picture
+    FROM comments c
+    JOIN users u ON c.user_id = u.id
+    WHERE c.image_name = ?
+    ORDER BY c.created_at DESC"
     );
     $stmt->execute([$imageName]);
     $rows = $stmt->fetchAll();
@@ -75,10 +75,12 @@ class CommentManager {
     $comment = new Comment(
         $row['comment'],
         $row['user_id'],
-        $row['name'],               // this is users.name as userName
-        $row['image_name'],         // image name from comments table
+        $row['user_name'],
+        $row['image_name'],
         $row['created_at'],
-        $row['id']
+        $row['id'],
+        $row['profile_picture'] ?? 'default.png'
+        
     );
     $comments[] = $comment;
 }

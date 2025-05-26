@@ -103,7 +103,15 @@ foreach ($photos as $photo):
 
 	    foreach ($comments as $comment): ?>
 	    	<div class="comment bg-light p-2 mb-1 text-start">
-	    	    <strong><?php echo htmlspecialchars($comment->getUserName()); ?>:</strong>
+	    	    <?php
+				$pic = $comment->getProfilePicture();
+				if (empty($pic) || !file_exists(__DIR__ . '/img/avatars/' . $pic)) {
+				    $pic = 'default.png';
+				}
+				$avatarPath = 'img/avatars/' . htmlspecialchars($pic);
+				?>
+				<img src="<?php echo $avatarPath; ?>" alt="Avatar" style="width:32px;height:32px;border-radius:50%;vertical-align:middle;margin-right:6px;">
+				<strong><?php echo htmlspecialchars($comment->getUserName()); ?>:</strong>
 				<?php echo nl2br(htmlspecialchars($comment->getComment())); ?>
 				<br><small><?php echo $comment->getCreatedAt(); ?></small>
 
@@ -113,27 +121,29 @@ foreach ($photos as $photo):
                     $isOwner = $_SESSION['user']['id'] === $comment->getUserId();
 
                     if ($isOwner || $isAdmin): ?>
-                        
-                        <div>
-                            <?php if (isset($editingId) && $editingId == $comment->getId() && ($isOwner || $isAdmin)): ?>
-							    <!-- Inline Edit Form -->
-						    <form action="submit_edit.php" method="POST" class="mb-2">
-							    <input type="hidden" name="id" value="<?php echo $comment->getId(); ?>">
-							    <textarea name="comment" class="form-control mb-1" required><?php echo htmlspecialchars($comment->getComment()); ?></textarea>
-							    <button type="submit" class="btn btn-sm btn-success">Save</button>
-							    <a href="categories.php" class="btn btn-sm btn-secondary">Cancel</a>
-							</form>
-						<?php else: ?>
-						    <a href="?edit=<?php echo $comment->getId(); ?>">Edit</a>
-							<?php if ($isAdmin): ?>
-							    <form method="POST" action="delete_comment.php" style="display:inline;">
-								    <input type="hidden" name="comment_id" value="<?php echo $comment->getId(); ?>">
-								    <button type="submit" onclick="return confirm('Delete this comment?')" class="btn btn-link btn-sm p-0 m-0 align-baseline">Delete</button>
-								</form>
-							<?php endif; ?>
-						<?php endif; ?>
-                        </div>
-                    <?php endif;
+					    <div>
+					        <?php if (isset($editingId) && $editingId == $comment->getId() && $isOwner): ?>
+					            <!-- Inline Edit Form (only owner can see) -->
+					            <form action="submit_edit.php" method="POST" class="mb-2">
+					                <input type="hidden" name="id" value="<?php echo $comment->getId(); ?>">
+					                <textarea name="comment" class="form-control mb-1" required><?php echo htmlspecialchars($comment->getComment()); ?></textarea>
+					                <button type="submit" class="btn btn-sm btn-success">Save</button>
+					                <a href="categories.php" class="btn btn-sm btn-secondary">Cancel</a>
+					            </form>
+					        <?php elseif ($isOwner): ?>
+					            <!-- Edit link (only for owner) -->
+					            <a href="?edit=<?php echo $comment->getId(); ?>">Edit</a>
+					        <?php endif; ?>
+							
+					        <?php if ($isAdmin): ?>
+					            <!-- Delete button (only for admin) -->
+					            <form method="POST" action="delete_comment.php" style="display:inline;">
+					                <input type="hidden" name="comment_id" value="<?php echo $comment->getId(); ?>">
+					                <button type="submit" onclick="return confirm('Delete this comment?')" class="btn btn-link btn-sm p-0 m-0 align-baseline">Delete</button>
+					            </form>
+					        <?php endif; ?>
+					    </div>
+					<?php endif;
                 }
                 ?>
             </div>

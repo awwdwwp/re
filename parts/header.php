@@ -4,11 +4,25 @@
 			<a class="site-logo" href="index.php">
 				<img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5vjWXmgLzCT1il71p9fi8e/ce4b5ae3a6699d057c368742f3b1bee0/ac_franchise_mobile_logo.png" height="37px" alt="">
 			</a>
-			<?php session_start(); ?>
+			<?php
+			if (session_status() === PHP_SESSION_NONE) session_start();
+			$avatar = 'img/avatars/default.png';
+			if (isset($_SESSION['user'])) {
+			    $pic = $_SESSION['user']['profile_picture'] ?? 'default.png';
+				$picPath = dirname(__DIR__) . '/img/avatars/' . $pic;
+
+				if (!file_exists($picPath) || empty($pic)) {
+				    $pic = 'default.png';
+				}
+			    $avatar = '/re/img/avatars/' . htmlspecialchars($pic);
+			}
+			?>
 			<div class="user-panel">
 			    <?php if (isset($_SESSION['user'])): ?>
-			        Welcome, <?= htmlspecialchars($_SESSION['user']['name']) ?> /
-			        <a href="logout.php">Logout</a>
+			        <a href="profile.php" title="Profile">
+			            <img src="<?= $avatar ?>" alt="Profile" class="rounded-circle" style="height: 36px; width: 36px; object-fit: cover; border: 2px solid #fff; cursor: pointer;" onclick="location.href='profile.php'">
+			        </a>
+			        <a href="logout.php" style="margin-left: 8px;">Logout</a>
 			    <?php else: ?>
 			        <a href="login.php">Login</a> / <a href="register.php">Register</a>
 			    <?php endif; ?>
@@ -21,16 +35,25 @@
 			<!-- site menu -->
 			<nav class="main-menu">
 				<ul>
+					<?php if (isset($_SESSION['user']) && ($_SESSION['user']['role'] ?? '') === 'admin'): ?>
+					    <li><a href="admin_users.php">Admin Panel</a></li>
+					<?php endif; ?>
 					<li><a href="index.php">Home</a></li>
 					<li><a href="review.php">Games</a></li>
 					<li><a href="categories.php">Gallery</a></li>
-					<li><a href="community.html">Forums</a></li>
+					<li><a href="public/qna.php">QnA</a></li>
 					<li><a href="contact.php">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
 		 <style>
-
+.profile-thumb {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+}
 .header-section {
     background-color: rgba(33, 45, 51, 1);
     height: 70px; /* taller header */

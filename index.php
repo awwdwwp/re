@@ -169,7 +169,9 @@ $games = json_decode(file_get_contents('json/recent_games.json'), true);
             <?php endforeach; ?>
         </div>
     </div>
-    <button class="custom-btn btn w-25 mt-5 ms-0" type="button" id="btn2" aria-label="view all games">View All Games</button>
+    <button class="custom-btn btn w-25 mt-5 ms-0" type="button" id="btn2" aria-label="view all games" onclick="location.href='review.php'">
+	    View All Games
+    </button>
 </section>
 	<!-- Recent game section end -->
 
