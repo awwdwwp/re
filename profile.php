@@ -18,7 +18,6 @@ $db = new Database('contact');
 $conn = $db->getConnection();
 $profileManager = new ProfileManager($conn);
 
-// Refresh user from DB
 $user = $profileManager->getUserById($_SESSION['user']['id']);
 if ($user) {
     $_SESSION['user'] = $user;
@@ -31,6 +30,7 @@ if ($user) {
 <!DOCTYPE html>
 <html>
 <head>
+    <link data-react-helmet="true" rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="https://static-dm.ubisoft.com/assassins-creed/franchise/prod/favicon.ico"/>
     <title>My Profile</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <style>
