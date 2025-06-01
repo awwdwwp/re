@@ -72,7 +72,7 @@ if ($user) {
             <hr>
             <form action="update_name.php" method="POST">
                 <label for="name">Nickname:</label><br>
-                <input type="text" class="form-control" name="name" value="<?= htmlspecialchars($user['name']) ?>" required><br><br>
+                <input type="text" class="form-control" name="nickname" value="<?= htmlspecialchars($user['name']) ?>" required><br><br>
                 <button class="btn btn-primary btn-space" type="submit">Change Nickname</button>
             </form>
             <form action="upload_profile.php" method="POST" enctype="multipart/form-data" class="mt-3">       
