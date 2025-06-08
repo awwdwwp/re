@@ -22,7 +22,7 @@ class CommentManager {
     }
 
     public function updateComment(int $id, string $newText, array $user): bool {
-        // Fetch comment to check ownership
+        
         $stmt = $this->conn->prepare("SELECT * FROM comments WHERE id = ?");
         $stmt->execute([$id]);
         $existing = $stmt->fetch();

@@ -16,7 +16,7 @@ class ProfileManager {
     public function getUserById(int $id): ?array {
         $stmt = $this->conn->prepare("SELECT * FROM users WHERE id = ?");
         $stmt->execute([$id]);
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        $user = $stmt->fetch();
         return $user ?: null;
     }
 
