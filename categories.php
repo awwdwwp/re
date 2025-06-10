@@ -1,5 +1,7 @@
 
-
+<?php if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+} ?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -98,7 +100,7 @@ foreach ($photos as $photo):
                 <?php
                 if (isset($_SESSION['user'])) {
                     $isAdmin = ($_SESSION['user']['role'] ?? '') === 'admin';
-                    $isOwner = $_SESSION['user']['id'] === $comment->getUserId();
+                    $isOwner = $_SESSION['user']['id'] == $comment->getUserId();
 
                     if ($isOwner || $isAdmin): ?>
 					    <div>
@@ -109,7 +111,7 @@ foreach ($photos as $photo):
 					                <button type="submit" class="btn btn-sm btn-success">Save</button>
 					                <a href="categories.php" class="btn btn-sm btn-secondary">Cancel</a>
 					            </form>
-
+								
 					        <?php elseif ($isOwner): ?>
 					            <a href="?edit=<?php echo $comment->getId(); ?>">Edit</a>
 					        <?php endif; ?>
